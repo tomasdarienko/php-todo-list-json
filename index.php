@@ -42,16 +42,20 @@ Buon pranzo e buon lavoro! (modificato)  -->
                     </div>
                     <div class="col-6">
                          <ul>
-                              <li v-for= "todo in todo" :key="key">{{ todo.task }}</li>
+                              <li v-for= "todo in todo" >{{ todo.task }} </li>
                          </ul>
                          
+                    </div>
+                    <div class="col-12">
+                         <input type="text" @keyup.enter="updatetodo" v-model="item" placeholder="add task">
+                         <button @click="updatetodo" id="savetodo">+</button>
                     </div>
                </div>
           </div>
      </div>
 
 
-     <script src="./script.js" type="text/javascript"></script>
+     <script src="./script.js" type="text/javascript"  ></script>
 </body>
 
 </html>
